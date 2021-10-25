@@ -1,3 +1,3 @@
 # Peluquería
-## Nombre:
-## Peluquera:
+## Nombre: Capelos Belleza
+## Peluquera: Olivia

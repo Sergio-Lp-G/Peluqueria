@@ -21,7 +21,7 @@
 <div id="redes"></div>
 <div id="tarifas"></div>
 <div>
-    <p>Cancela tu cita con: 3 horas de antelación</p>
+    <p>Cancela tu cita con: 3 horas de antelación.</p>
 </div>
 <div>
 

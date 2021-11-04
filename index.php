@@ -1,5 +1,5 @@
 <?php
 
-require_once "App.php";
+require_once "php/App.php";
 $app = new App;
 $app->run();

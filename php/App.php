@@ -8,7 +8,6 @@ class App
 
     public function __construct()
     {
-
     }
 
     public function run()
@@ -37,23 +36,21 @@ class App
         }
     }
 
-    public function save_trabajador() {
+    public function save_trabajador()
+    {
 
         $arrParams = [];
 
-        if ( isset( $_POST[ 'nombre' ] ) ){
-            $nombreTrabajador =  $_POST[ 'nombre' ];
-            $arrParams[ 'nombre' ] = $nombreTrabajador;
+        if (isset($_POST['nombre'])) {
+            $nombreTrabajador =  $_POST['nombre'];
+            $arrParams['nombre'] = $nombreTrabajador;
         }
 
-        trabajador_new( $arrParams );
-
+        trabajador_new($arrParams);
     }
 
-    public function home() {
-        include ('../html/inicio.html');
+    public function home()
+    {
+        include('../html/inicio.html');
     }
-
-
-
 }

@@ -38,7 +38,9 @@ class App
 
     public function save_trabajador()
     {
+        //echo "<h2> Hola mundo </h2>";
 
+        
         $arrParams = [];
 
         if (isset($_POST['nombre'])) {

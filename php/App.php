@@ -38,7 +38,9 @@ class App
 
     public function save_trabajador()
     {
+        echo "<h2> Hola mundo </h2>";
 
+        /*
         $arrParams = [];
 
         if (isset($_POST['nombre'])) {
@@ -46,11 +48,14 @@ class App
             $arrParams['nombre'] = $nombreTrabajador;
         }
 
-        trabajador_new($arrParams);
+        trabajador_new($arrParams);*/
+        include('home.php');
+        //include('../html/inicio.html');
+        echo "<h2> Hola mundo 2 </h2>";
     }
 
     public function home()
     {
-        include('../html/inicio.html');
+        include('home.php');
     }
 }

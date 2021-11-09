@@ -56,4 +56,9 @@ class App
     {
         include('views/home.php');
     }
+
+    public function login()
+    {
+        include('views/login.php');
+    }
 }

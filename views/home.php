@@ -25,21 +25,7 @@
     <div>
         <p>Cancela tu cita con: 3 horas de antelación.</p>
     </div>
-    <a class="nav-link" href="<?= "home" ?>">Usuarios</a>
-    <div id="newTrabajador">
-
-        <form id="formulario_trabajador_new" method="POST" action="../App.php?method=save_trabajador">
-            <label>Nombre: </label><input type="text" value="" name="nombre"><br>
-            <label>Apellidos: </label><input type="text" value="" name="apellidos"><br>
-            <label>Teléfono: </label><input type="text" value="" name="telefono"><br>
-
-            <input type="submit" value="enviar">
-        </form>
-
-    </div>
-
-
-
+    <a class="nav-link" href="App.php?method=login">Usuarios</a>
 
 </body>
 

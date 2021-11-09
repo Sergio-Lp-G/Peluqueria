@@ -46,11 +46,12 @@ class App
             $arrParams['nombre'] = $nombreTrabajador;
         }
 
+        //echo 'PEPEEEEEEE';
         trabajador_new($arrParams);
     }
 
     public function home()
     {
-        include('../html/inicio.html');
+        include('views/home.php');
     }
 }

@@ -9,7 +9,7 @@
 <body>
 <div id="encabezado">
     <div id="menu">
-        <img src="" alt="logo">
+        <img src="../img/BELLEZAcapello-01.jpg" alt="logo">
         <nav></nav>
     </div>
     <div id="info">

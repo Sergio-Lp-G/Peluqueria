@@ -1,6 +1,6 @@
 <?php
 
-//require 'helpers/trabajadores_helper.php';
+require 'app/helpers/trabajadores_helper.php';
 
 class App
 {
@@ -49,11 +49,11 @@ class App
 
     public function home()
     {
-        include('views/home.php');
+        include('app/views/home.php');
     }
 
     public function login()
     {
-        include('views/login.php');
+        include('app/views/login.php');
     }
 }

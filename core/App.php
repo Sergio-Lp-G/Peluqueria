@@ -1,17 +1,12 @@
 <?php
 
-require 'helpers/trabajadores_helper.php';
+//require 'helpers/trabajadores_helper.php';
 
 class App
 {
-
-
     public function __construct()
     {
-    }
 
-    public function run()
-    {
         // El método a ejecutar depende de un argumente $GET
         if (isset($_GET['method'])) {
             $method = $_GET['method'];
@@ -40,7 +35,7 @@ class App
     {
         //echo "<h2> Hola mundo </h2>";
 
-        
+
         $arrParams = [];
 
         if (isset($_POST['nombre'])) {

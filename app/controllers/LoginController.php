@@ -3,6 +3,9 @@
 /**
 *
 */
+namespace App\Controllers;
+
+
 class LoginController
 {
 
@@ -66,7 +69,7 @@ class LoginController
         }
 
         //echo 'PEPEEEEEEE';
-        trabajador_new($arrParams);
+        \App\Helpers\trabajador_new($arrParams);
     }
 }
 

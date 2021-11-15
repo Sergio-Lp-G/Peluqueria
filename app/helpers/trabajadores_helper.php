@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Helpers;
+
 function db_conn() {
 
     $servername = "localhost";

@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 require 'app/helpers/trabajadores_helper.php';
 
 class App
@@ -10,27 +12,27 @@ class App
         // El método a ejecutar depende de un argumente $GET
 
         # region CONSTRUCTOR OLD
-//        if (isset($_GET['method'])) {
-//            $method = $_GET['method'];
-//        } else {
-//            $method = 'home';
-//        }
-//
-//        try {
-//            $this->$method();
-//        } catch (Throwable $th) {
-//            if (method_exists($this, $method)) {
-//                header("HTTP/1.0 500 Internal Server Error");
-//                return http_response_code(500);
-//                echo "Error en el servidor";
-//            } else {
-//                header("HTTP/1.0 404 Not Found");
-//                echo "No encontrado";
-//            }
-//        } finally {
-//            echo "<pre>";
-//            //print_r($th);
-//        }
+        //        if (isset($_GET['method'])) {
+        //            $method = $_GET['method'];
+        //        } else {
+        //            $method = 'home';
+        //        }
+        //
+        //        try {
+        //            $this->$method();
+        //        } catch (Throwable $th) {
+        //            if (method_exists($this, $method)) {
+        //                header("HTTP/1.0 500 Internal Server Error");
+        //                return http_response_code(500);
+        //                echo "Error en el servidor";
+        //            } else {
+        //                header("HTTP/1.0 404 Not Found");
+        //                echo "No encontrado";
+        //            }
+        //        } finally {
+        //            echo "<pre>";
+        //            //print_r($th);
+        //        }
 
         # endregion CONSTRUCTOR OLD
 
@@ -56,7 +58,9 @@ class App
             header("HTTP/1.0 404 Not Found");
             die();
         }
-
+        
+        $controllerName = '\\App\\Controllers\\' . $controllerName;
+        
         $controllerObject = new $controllerName;
         if (method_exists($controllerName, $method)) {
             $controllerObject->$method($arguments);
@@ -65,7 +69,6 @@ class App
             echo "No encontrado";
             die();
         }
-
     }
 
     // public function save_trabajador()

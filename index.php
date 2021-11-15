@@ -2,5 +2,5 @@
 
 require "core/App.php";
 require "config/env.php";
-$app = new App;
+$app = new \Core\App();
 /*$app->run();*/

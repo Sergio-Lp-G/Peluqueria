@@ -9,17 +9,7 @@
 </head>
 
 <body>
-    <div id="encabezado">
-        <div id="menu">
-            <img src="../img/BELLEZAcapello-01.jpg" alt="logo">
-            <nav></nav>
-        </div>
-        <div id="info">
-
-        </div>
-        <img src="" alt="foto-carrusel">
-        <div id="cita"></div>
-    </div>
+    <?php require "app/views/header.php" ?>
     <div id="redes"></div>
     <div id="tarifas"></div>
     <div>
@@ -37,6 +27,8 @@
 
     </div>
 
+
+    <?php require "app/views/footer.php" ?>
 </body>
 
 </html>

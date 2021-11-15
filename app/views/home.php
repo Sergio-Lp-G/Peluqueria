@@ -17,6 +17,9 @@
     </div>
     <a class="nav-link" href="<?= PATH."login"?>">Usuarios</a>
 
+
+
+    <?php require "app/views/footer.php" ?>
 </body>
 
 </html>

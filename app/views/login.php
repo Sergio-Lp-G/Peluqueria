@@ -20,7 +20,10 @@
         <form id="formulario_trabajador_new" method="POST" action="/login/save_trabajador">
             <label>Nombre: </label><input type="text" value="" name="nombre"><br>
             <label>Apellidos: </label><input type="text" value="" name="apellidos"><br>
-            <label>Teléfono: </label><input type="text" value="" name="telefono"><br>
+            <label>Teléfono: </label><input type="number" value="" name="telefono"><br>
+            <label>Email: </label><input type="text" value="" name="email"><br>
+            <label>Usuario: </label><input type="text" value="" name="login"><br>
+            <label>Contraseña: </label><input type="password" value="" name="password"><br>
 
             <input type="submit" value="enviar">
         </form>

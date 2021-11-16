@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `servicio`
 --
-CREATE DATABASE IF NOT EXISTS `capelos` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `capelos` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
 
 CREATE TABLE `capelos`.`servicio` (
   `id` int(11) NOT NULL,

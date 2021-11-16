@@ -30,7 +30,7 @@ CREATE DATABASE IF NOT EXISTS `capelos` DEFAULT CHARACTER SET utf8 COLLATE utf8_
 
 CREATE TABLE `capelos`.`servicio` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(11) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `nombre` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `categoria` enum('corte','peinado','coloracion','cambio_temporal') COLLATE utf8_spanish_ci NOT NULL,
   `duracion` int(11) DEFAULT NULL,
   `precio` int(11) DEFAULT NULL

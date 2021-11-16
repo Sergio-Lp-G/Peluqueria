@@ -26,8 +26,9 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `servicio`
 --
+CREATE DATABASE IF NOT EXISTS `capelos` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-CREATE TABLE `servicio` (
+CREATE TABLE `capelos`.`servicio` (
   `id` int(11) NOT NULL,
   `nombre` varchar(11) COLLATE utf8_spanish_ci DEFAULT NULL,
   `categoria` enum('corte','peinado','coloracion','cambio_temporal') COLLATE utf8_spanish_ci NOT NULL,
@@ -42,7 +43,7 @@ CREATE TABLE `servicio` (
 --
 -- Indices de la tabla `servicio`
 --
-ALTER TABLE `servicio`
+ALTER TABLE `capelos`.`servicio`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -52,7 +53,7 @@ ALTER TABLE `servicio`
 --
 -- AUTO_INCREMENT de la tabla `servicio`
 --
-ALTER TABLE `servicio`
+ALTER TABLE `capelos`.`servicio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 

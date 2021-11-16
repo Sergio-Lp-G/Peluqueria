@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS `capelos_belleza` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `capelos_belleza`;
+CREATE DATABASE IF NOT EXISTS `cpls` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `cpls`;
 
 DROP TABLE IF EXISTS `servicios`;
 CREATE TABLE `servicios`(

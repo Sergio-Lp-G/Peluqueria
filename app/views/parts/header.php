@@ -13,6 +13,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="<?= PATH."user"?>">Usuarios</a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="<?= PATH."servicio"?>">Servicios</a>
+            </li>
         </ul>
 
         <!-- nuevo -->

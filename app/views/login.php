@@ -19,7 +19,7 @@
     </div>
     <div id="newTrabajador">
 
-        <form id="formulario_trabajador_new" method="POST" action="capelos-belleza/login/save_trabajador">
+        <form id="formulario_trabajador_new" method="POST" action="/login/save_trabajador">
             <label>Nombre: </label><input type="text" value="" name="nombre"><br>
             <label>Apellidos: </label><input type="text" value="" name="apellidos"><br>
             <label>Teléfono: </label><input type="number" value="" name="telefono"><br>
@@ -35,6 +35,5 @@
 
     <?php require "app/views/parts/footer.php" ?>
 </body>
-<?php require "app/views/parts/scripts.php" ?>
 
 </html>

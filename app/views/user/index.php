@@ -12,7 +12,7 @@
   <main role="main" class="container">
     <div class="starter-template">
       <h1>Lista de usuarios</h1>
-      <p><a href="<?= PATH."/user/create/".$user->id ?>" class="boton btn btn-primary">Nuevo</a></p>
+      <p><a href="<?= PATH."user/create/".$user->id ?>" class="boton btn btn-primary">Nuevo</a></p>
       <table class="tabla table table-striped table-hover">
         <tr>
           <th>Nombre</th>
@@ -30,9 +30,9 @@
           <td><?php echo $user->birthdate ? $user->birthdate->format('d-m-Y') : 'nonato' ?></td>
           <td>
           
-            <a href="<?= PATH."/user/show/".$user->id ?>" class="boton btn btn-primary">Ver </a>
-            <a href="<?= PATH."/user/edit/".$user->id ?>" class="boton btn btn-primary">Editar </a>
-            <a href="<?= PATH."/user/delete/".$user->id ?>" class="boton btn btn-primary">Borrar </a>
+            <a href="<?= PATH."user/show/".$user->id ?>" class="boton btn btn-primary">Ver </a>
+            <a href="<?= PATH."user/edit/".$user->id ?>" class="boton btn btn-primary">Editar </a>
+            <a href="<?= PATH."user/delete/".$user->id ?>" class="boton btn btn-primary">Borrar </a>
           </td>
           </tr>
         <?php } ?>

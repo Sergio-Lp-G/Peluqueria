@@ -49,7 +49,7 @@ class UserController
         $user->birthdate = $_REQUEST['birthdate'];
         $user->email = $_REQUEST['email'];
         $user->insert();
-        header('Location:'.PATH.'/user');
+        header('Location:'.PATH.'user');
     }
     
     public function show($args)
@@ -77,7 +77,7 @@ class UserController
         $user->birthdate = $_REQUEST['birthdate'];
         $user->email = $_REQUEST['email'];
         $user->save();
-        header('Location:'.PATH.'/user');
+        header('Location:'.PATH.'user');
     }
 
     public function delete($arguments)
@@ -85,6 +85,6 @@ class UserController
         $id = (int) $arguments[0];
         $user = User::find($id);
         $user->delete();
-        header('Location:'.PATH.'/user');
+        header('Location:'.PATH.'user');
     }    
 }

@@ -69,7 +69,7 @@ class LoginController
         }
 
         //echo 'PEPEEEEEEE';
-        \App\Helpers\trabajador_new($arrParams);
+        /* \App\Helpers\trabajador_new($arrParams);*/
     }
 }
 

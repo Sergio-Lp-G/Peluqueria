@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <?php require "app/views/header.php" ?>
+    <?php require "app/views/parts/header.php" ?>
     <div id="redes"></div>
     <div id="tarifas"></div>
     <div>
@@ -20,7 +20,7 @@
 
 
 
-    <?php require "app/views/footer.php" ?>
+    <?php require "app/views/parts/footer.php" ?>
 </body>
 
 </html>

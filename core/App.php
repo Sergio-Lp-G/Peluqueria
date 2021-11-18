@@ -2,7 +2,6 @@
 
 namespace Core;
 
-require 'app/helpers/trabajadores_helper.php';
 
 class App
 {

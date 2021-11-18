@@ -21,8 +21,8 @@
     <div>
         <p>Cancela tu cita con: 3 horas de antelación.</p>
     </div>
-    <a class="nav-link" href="<?= PATH."login"?>">Usuarios</a>
-
+    <!--<a class="nav-link" href="<?= PATH."login"?>">Usuarios</a>
+-->
 
 
     <?php require "app/views/parts/footer.php" ?>

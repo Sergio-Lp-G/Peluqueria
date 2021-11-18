@@ -7,11 +7,10 @@
 
 <body>
     <?php require "app/views/parts/header.php" ?>
-    <div id="redes"></div>
-    <div id="tarifas"></div>
-    <div>
-        <p>Cancela tu cita con: 3 horas de antelación.</p>
-    </div>
+
+    <hr>
+
+    <hr>
     <?php require "app/views/parts/footer.php" ?>
 </body>
 

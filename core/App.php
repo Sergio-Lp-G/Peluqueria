@@ -86,13 +86,19 @@ class App
     //     trabajador_new($arrParams);
     // }
 
-    public function home()
-    {
-        include('app/views/home.php');
-    }
+    // public function home()
+    // {
+    //     include('app/views/home.php');
+    // }
 
-    public function login()
-    {
-        include('app/views/login.php');
-    }
+    // public function login()
+    // {
+    //     include('app/views/login.php');
+    // }
+
+    // public function servicios()
+    // {
+    //     include('app/views/servicios.php');
+    // }
+
 }

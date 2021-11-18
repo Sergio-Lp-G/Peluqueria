@@ -12,7 +12,7 @@
   <main role="main" class="container">
     <div class="starter-template">
 
-    <h1>Edición de usuario</h1>
+    <h1>Edición de servicio</h1>
 
     <form method="post" action="<?= PATH."/user/update"?>">
         <input type="hidden" name="id"

@@ -11,7 +11,7 @@
 
   <main role="main" class="container">
     <div class="starter-template">
-      <h1>Detalle del usuario <?php echo $user->id ?></h1>
+      <h1>Detalle del servicio <?php echo $user->id ?></h1>
         <ul>
             <li><strong>Nombre: </strong><?php echo $user->name ?></li>
             <li><strong>Apellidos: </strong><?php echo $user->surname ?></li>

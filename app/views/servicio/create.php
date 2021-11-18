@@ -12,7 +12,7 @@
   <main role="main" class="container">
     <div class="starter-template">
 
-    <h1>Alta de usuario</h1>
+    <h1>Alta de servicio</h1>
     
     <form method="post" action="<?= PATH."user/store"?>">
 

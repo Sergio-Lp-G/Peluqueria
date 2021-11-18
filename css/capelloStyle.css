@@ -1,3 +1,16 @@
 body{
     background-color: blanchedalmond;
 }
+
+#logo {
+    width: 100px;
+}
+
+.boton {
+    background-color: coral;
+}
+
+.tabla td {
+    background-color: transparent;
+    border-bottom: crimson 1px solid;
+}

@@ -12,7 +12,7 @@ class Servicio extends Model
 {
     public function __construct()
     {
-        $this->birthdate = DateTime::createFromFormat('Y-m-d', $this->birthdate);
+       // $this->birthdate = DateTime::createFromFormat('Y-m-d', $this->birthdate);
     }
     public static function all(){
         //obtener conexión
@@ -22,9 +22,9 @@ class Servicio extends Model
         //ejecutar
         $statement = $db->query($sql);
         //recoger datos con fetch_all
-        $servicio = $statement->fetchAll(PDO::FETCH_CLASS, Servicio::class);
+        $servicios = $statement->fetchAll(PDO::FETCH_CLASS, Servicio::class);
         //retornar
-        return $servicio;
+        return $servicios;
     }
     public static function find($id)
     {
@@ -39,23 +39,23 @@ class Servicio extends Model
     public function insert()
     {
         $db = Servicio::db();
-        $stmt = $db->prepare('INSERT INTO servicio(name, surname, birthdate, email) VALUES(:name, :surname, :birthdate, :email)');
-        $stmt->bindValue(':name', $this->name);
-        $stmt->bindValue(':surname', $this->surname);
-        $stmt->bindValue(':email', $this->email);
-        $stmt->bindValue(':birthdate', $this->birthdate);
+        $stmt = $db->prepare('INSERT INTO servicio(nombre, categoria, duracion, precio) VALUES(:nombre, :categoria, :duracion, :precio)');
+        $stmt->bindValue(':nombre', $this->nombre);
+        $stmt->bindValue(':categoria', $this->categoria);
+        $stmt->bindValue(':duracion', $this->duracion);
+        $stmt->bindValue(':precio', $this->precio);
         return $stmt->execute();
     }
 
     public function save()
     {
         $db = Servicio::db();
-        $stmt = $db->prepare('UPDATE servicio SET name = :name, surname = :surname, birthdate = :birthdate, email = :email WHERE id = :id');
+        $stmt = $db->prepare('UPDATE servicio SET nombre = :nombre, categoria = :categoria, duracion = :duracion, precio = :precio WHERE id = :id');
         $stmt->bindValue(':id', $this->id);
-        $stmt->bindValue(':name', $this->name);
-        $stmt->bindValue(':surname', $this->surname);
-        $stmt->bindValue(':birthdate', $this->birthdate);
-        $stmt->bindValue(':email', $this->email);
+        $stmt->bindValue(':nombre', $this->nombre);
+        $stmt->bindValue(':categoria', $this->categoria);
+        $stmt->bindValue(':duracion', $this->duracion);
+        $stmt->bindValue(':precio', $this->precio);
         return $stmt->execute();
     }
 

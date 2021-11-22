@@ -14,23 +14,23 @@
 
     <h1>Alta de servicio</h1>
     
-    <form method="post" action="<?= PATH."user/store"?>">
+    <form method="post" action="<?= PATH."servicio/store"?>">
 
     <div class="form-group">
         <label>Nombre</label>
         <input type="text" name="name" class="form-control">
     </div>
     <div class="form-group">
-        <label>Apellidos</label>
-        <input type="text" name="surname" class="form-control">
+        <label>Categoría</label>
+        <input type="text" name="category" class="form-control">
     </div>
     <div class="form-group">
-        <label>F. nacimiento</label>
-        <input type="text" name="birthdate" class="form-control">
+        <label>Duracion</label>
+        <input type="text" name="time" class="form-control">
     </div>
     <div class="form-group">
-        <label>Email</label>
-        <input type="text" name="email" class="form-control">
+        <label>Precio</label>
+        <input type="text" name="price" class="form-control">
     </div>
     <button type="submit" class="btn btn-default">Enviar</button>
     </form>    

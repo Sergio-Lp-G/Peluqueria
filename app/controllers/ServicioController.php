@@ -6,6 +6,7 @@
 
 namespace App\Controllers;
 
+require_once "app/models/servicio.php";
 use App\Models\Servicio;
 
 class ServicioController
@@ -18,6 +19,9 @@ class ServicioController
     public function index()
     {
         // echo "<p>En Index()</p>";
+        //buscar datos
+        $servicios = Servicio::all();
+        //pasar a la vista
         require "app/views/servicio/index.php";
     }
 
@@ -29,10 +33,10 @@ class ServicioController
     public function store()
     {
         $servicio = new Servicio();
-        $servicio->name = $_REQUEST['name'];
-        $servicio->surname = $_REQUEST['surname'];
-        $servicio->birthdate = $_REQUEST['birthdate'];
-        $servicio->email = $_REQUEST['email'];
+        $servicio->nombre = $_REQUEST['name'];
+        $servicio->categoria = $_REQUEST['category'];
+        $servicio->duracion = $_REQUEST['time'];
+        $servicio->precio = $_REQUEST['price'];
         $servicio->insert();
         header('Location:'.PATH.'user');
     }
@@ -57,10 +61,10 @@ class ServicioController
     {
         $id = $_REQUEST['id'];
         $servicio = Servicio::find($id);
-        $servicio->name = $_REQUEST['name'];
-        $servicio->surname = $_REQUEST['surname'];
-        $servicio->birthdate = $_REQUEST['birthdate'];
-        $servicio->email = $_REQUEST['email'];
+        $servicio->nombre = $_REQUEST['name'];
+        $servicio->categoria = $_REQUEST['category'];
+        $servicio->duracion = $_REQUEST['time'];
+        $servicio->precio = $_REQUEST['price'];
         $servicio->save();
         header('Location:'.PATH.'servicio');
     }

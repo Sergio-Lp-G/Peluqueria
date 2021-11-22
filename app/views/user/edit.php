@@ -14,7 +14,7 @@
 
     <h1>Edición de usuario</h1>
 
-    <form method="post" action="<?= PATH."/user/update"?>">
+    <form method="post" action="<?= PATH."user/update"?>">
         <input type="hidden" name="id"
         value="<?php echo $user->id ?>">
 

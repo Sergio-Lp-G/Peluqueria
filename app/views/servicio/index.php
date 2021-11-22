@@ -16,18 +16,18 @@
       <table class="tabla table table-striped table-hover">
         <tr>
           <th>Nombre</th>
-          <th>Apellidos</th>
-          <th>Email</th>
-          <th>F. nacimiento</th>
+          <th>Categoría</th>
+          <th>Duración</th>
+          <th>Precio</th>
           <th></th>
         </tr>
 
         <?php foreach ($servicios as $key => $servicio) { ?>
           <tr>
-          <td><?php echo $servicio->name ?></td>
-          <td><?php echo $servicio->surname ?></td>
-          <td><?php echo $servicio->email ?></td>
-          <td><?php echo $servicio->birthdate ? $servicio->birthdate->format('d-m-Y') : 'nonato' ?></td>
+          <td><?php echo $servicio->nombre ?></td>
+          <td><?php echo $servicio->categoria ?></td>
+          <td><?php echo $servicio->duracion ?></td>
+          <td><?php echo $servicio->precio ?></td>
           <td>
           
             <a href="<?= PATH."servicio/show/".$servicio->id ?>" class="boton btn btn-primary">Ver </a>

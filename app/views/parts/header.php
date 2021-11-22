@@ -11,7 +11,7 @@
                 <a class="nav-link" href="<?= PATH."home"?>">Home</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="<?= PATH."user"?>">Usuarios</a>
+                <a class="nav-link" href="<?= PATH."trabajador"?>">Trabajadores</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="<?= PATH."servicio"?>">Servicios</a>

@@ -11,12 +11,12 @@
 
   <main role="main" class="container">
     <div class="starter-template">
-      <h1>Detalle del servicio <?php echo $user->id ?></h1>
+      <h1>Detalle del servicio <?php echo $servicio->id ?></h1>
         <ul>
-            <li><strong>Nombre: </strong><?php echo $user->name ?></li>
-            <li><strong>Apellidos: </strong><?php echo $user->surname ?></li>
-            <li><strong>Email: </strong><?php echo $user->email ?></li>
-            <li><strong>F. nacimiento: </strong><?php echo $user->birthdate->format('d-m-Y') ?></li>
+            <li><strong>Nombre: </strong><?php echo $servicio->nombre ?></li>
+            <li><strong>Categoría: </strong><?php echo $servicio->categoria ?></li>
+            <li><strong>Duración: </strong><?php echo $servicio->duracion ?></li>
+            <li><strong>Precio: </strong><?php echo $servicio->precio ?></li>
         </ul>
     </div>
 

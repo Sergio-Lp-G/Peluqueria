@@ -14,32 +14,35 @@
 
     <h1>Edición de servicio</h1>
 
-    <form method="post" action="<?= PATH."/user/update"?>">
+    <form method="post" action="<?= PATH."servicio/update"?>">
         <input type="hidden" name="id"
-        value="<?php echo $user->id ?>">
+        value="<?php echo $servicio->id ?>">
 
     <div class="form-group">
         <label>Nombre</label>
         <input type="text" name="name" class="form-control"
-        value="<?php echo $user->name ?>"
+        value="<?php echo $servicio->nombre ?>"
         >
     </div>
     <div class="form-group">
-        <label>Apellidos</label>
-        <input type="text" name="surname" class="form-control"
-        value="<?php echo $user->surname ?>"
+        <label>Categoría</label>
+        <select name="category" class="form-control">
+            <option value="corte">Corte</option>
+            <option value="peinado">Peinado</option>
+            <option value="coloracion">Coloracion</option>
+            <option value="cambio_temporal">Cambio temporal</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Duración</label>
+        <input type="text" name="time" class="form-control"
+        value="<?php echo $servicio->duracion ?>"
         >
     </div>
     <div class="form-group">
-        <label>F. cumpleaños</label>
-        <input type="text" name="birthdate" class="form-control"
-        value="<?php echo $user->birthdate->format('Y-m-d') ?>"
-        >
-    </div>
-    <div class="form-group">
-        <label>Email</label>
-        <input type="text" name="email" class="form-control"
-        value="<?php echo $user->email ?>"
+        <label>Precio</label>
+        <input type="text" name="price" class="form-control"
+        value="<?php echo $servicio->precio ?>"
         >
     </div>
     <button type="submit" class="btn btn-default">Enviar</button>

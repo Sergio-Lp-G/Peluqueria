@@ -22,7 +22,12 @@
     </div>
     <div class="form-group">
         <label>Categoría</label>
-        <input type="text" name="category" class="form-control">
+        <select name="category" class="form-control">
+            <option value="corte">Corte</option>
+            <option value="peinado">Peinado</option>
+            <option value="coloracion">Coloracion</option>
+            <option value="cambio_temporal">Cambio temporal</option>
+        </select>
     </div>
     <div class="form-group">
         <label>Duracion</label>

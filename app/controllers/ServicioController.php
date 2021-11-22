@@ -13,7 +13,7 @@ class ServicioController
 {
     function __construct()
     {
-        echo "En ServicioController";
+        //echo "En ServicioController";
     }
 
     public function index()
@@ -38,7 +38,7 @@ class ServicioController
         $servicio->duracion = $_REQUEST['time'];
         $servicio->precio = $_REQUEST['price'];
         $servicio->insert();
-        header('Location:'.PATH.'user');
+        header('Location:'.PATH.'servicio');
     }
 
     public function show($args)

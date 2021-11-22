@@ -11,12 +11,12 @@
 
   <main role="main" class="container">
     <div class="starter-template">
-      <h1>Detalle del trabajador <?php echo $user->id ?></h1>
+      <h1>Detalle del trabajador <?php echo $trabajador->id ?></h1>
         <ul>
-            <li><strong>Nombre: </strong><?php echo $user->name ?></li>
-            <li><strong>Apellidos: </strong><?php echo $user->surname ?></li>
-            <li><strong>Email: </strong><?php echo $user->email ?></li>
-            <li><strong>F. nacimiento: </strong><?php echo $user->birthdate->format('d-m-Y') ?></li>
+            <li><strong>Nombre: </strong><?php echo $trabajador->name ?></li>
+            <li><strong>Apellidos: </strong><?php echo $trabajador->surname ?></li>
+            <li><strong>Email: </strong><?php echo $trabajador->email ?></li>
+            <li><strong>F. nacimiento: </strong><?php echo $trabajador->birthdate->format('d-m-Y') ?></li>
         </ul>
     </div>
 

@@ -6,7 +6,7 @@
 
 namespace App\Controllers;
 
-require_once "app/models/servicio.php";
+require_once "app/models/Servicio.php";
 use App\Models\Servicio;
 
 class ServicioController

@@ -12,9 +12,9 @@
   <main role="main" class="container">
     <div class="starter-template">
 
-    <h1>Alta de usuario</h1>
+    <h1>Alta de trabajador</h1>
     
-    <form method="post" action="<?= PATH."user/store"?>">
+    <form method="post" action="<?= PATH."trabajador/store"?>">
 
     <div class="form-group">
         <label>Nombre</label>

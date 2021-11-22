@@ -8,7 +8,7 @@ use Core\Model;
 require_once 'core/Model.php';
 
 
-class User extends Model
+class Trabajador extends Model
 {
     public function __construct()
     {
@@ -16,30 +16,30 @@ class User extends Model
     }
     public static function all(){ 
         //obtener conexión
-        $db = User::db();
+        $db = Trabajador::db();
         //preparar consulta
-        $sql = "SELECT * FROM users";
+        $sql = "SELECT * FROM trabajadores";
         //ejecutar
         $statement = $db->query($sql);
         //recoger datos con fetch_all
-        $users = $statement->fetchAll(PDO::FETCH_CLASS, User::class);
+        $trabajadores = $statement->fetchAll(PDO::FETCH_CLASS, Trabajador::class);
         //retornar
-        return $users;
+        return $trabajadores;
     }
     public static function find($id) 
     {
-        $db = User::db();
-        $stmt = $db->prepare('SELECT * FROM users WHERE id=:id');
+        $db = Trabajador::db();
+        $stmt = $db->prepare('SELECT * FROM trabajadores WHERE id=:id');
         $stmt->execute(array(':id' => $id));
-        $stmt->setFetchMode(PDO::FETCH_CLASS, User::class);
-        $user = $stmt->fetch(PDO::FETCH_CLASS);
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Trabajador::class);
+        $trabajador = $stmt->fetch(PDO::FETCH_CLASS);
         // echo $this->birthdate->format('d-m-y');
-        return $user;
+        return $trabajador;
     }    
     public function insert()
     {
-        $db = User::db();
-        $stmt = $db->prepare('INSERT INTO users(name, surname, birthdate, email) VALUES(:name, :surname, :birthdate, :email)');
+        $db = Trabajador::db();
+        $stmt = $db->prepare('INSERT INTO trabajadores(name, surname, birthdate, email) VALUES(:name, :surname, :birthdate, :email)');
         $stmt->bindValue(':name', $this->name);
         $stmt->bindValue(':surname', $this->surname);
         $stmt->bindValue(':email', $this->email);
@@ -49,8 +49,8 @@ class User extends Model
 
     public function save()
     {
-        $db = User::db();
-        $stmt = $db->prepare('UPDATE users SET name = :name, surname = :surname, birthdate = :birthdate, email = :email WHERE id = :id');
+        $db = Trabajador::db();
+        $stmt = $db->prepare('UPDATE trabajadores SET name = :name, surname = :surname, birthdate = :birthdate, email = :email WHERE id = :id');
         $stmt->bindValue(':id', $this->id);
         $stmt->bindValue(':name', $this->name);
         $stmt->bindValue(':surname', $this->surname);
@@ -60,8 +60,8 @@ class User extends Model
     }
     
     public function delete(){ 
-        $db = User::db();
-        $stmt = $db->prepare('DELETE FROM users WHERE id = :id');
+        $db = Trabajador::db();
+        $stmt = $db->prepare('DELETE FROM trabajadores WHERE id = :id');
         $stmt->bindValue(':id', $this->id);
         return $stmt->execute();
     }

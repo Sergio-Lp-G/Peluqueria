@@ -1,8 +1,8 @@
 <?php
 namespace App\Controllers;
 
-require_once "app/models/User.php";
-use App\Models\User;
+require_once "app/models/Trabajador.php";
+use App\Models\Trabajador;
 
 /*
 * La inserción requiere dos métodos en el controlador:
@@ -18,7 +18,7 @@ use App\Models\User;
 *
 *
 */
-class UserController
+class TrabajadorController
 {
 
     function __construct()
@@ -29,62 +29,62 @@ class UserController
     public function index()
     {
         //buscar datos
-        $users = User::all();
+        $trabajadores = Trabajador::all();
         //pasar a la vista
-        require('app/views/user/index.php');
+        require('app/views/trabajador/index.php');
     }
 
     
     
     public function create()
     {
-        require 'app/views/user/create.php';
+        require 'app/views/trabajador/create.php';
     }
     
     public function store()
     {
-        $user = new User();
-        $user->name = $_REQUEST['name'];
-        $user->surname = $_REQUEST['surname'];
-        $user->birthdate = $_REQUEST['birthdate'];
-        $user->email = $_REQUEST['email'];
-        $user->insert();
-        header('Location:'.PATH.'user');
+        $trabajador = new Trabajador();
+        $trabajador->name = $_REQUEST['name'];
+        $trabajador->surname = $_REQUEST['surname'];
+        $trabajador->birthdate = $_REQUEST['birthdate'];
+        $trabajador->email = $_REQUEST['email'];
+        $trabajador->insert();
+        header('Location:'.PATH.'trabajador');
     }
     
     public function show($args)
     {
         // $id = (int) $args[0];
         list($id) = $args;
-        $user = User::find($id);
-        // var_dump($user);
+        $trabajador = Trabajador::find($id);
+        // var_dump($trabajador);
         // exit();
-        require('app/views/user/show.php');        
+        require('app/views/trabajador/show.php');        
     }
     public function edit($arguments)
     {
         $id = (int) $arguments[0];
-        $user = User::find($id);
-        require 'app/views/user/edit.php';
+        $trabajador = Trabajador::find($id);
+        require 'app/views/trabajador/edit.php';
     }
     
     public function update()
     {
         $id = $_REQUEST['id'];
-        $user = User::find($id);
-        $user->name = $_REQUEST['name'];
-        $user->surname = $_REQUEST['surname'];
-        $user->birthdate = $_REQUEST['birthdate'];
-        $user->email = $_REQUEST['email'];
-        $user->save();
-        header('Location:'.PATH.'user');
+        $trabajador = Trabajador::find($id);
+        $trabajador->name = $_REQUEST['name'];
+        $trabajador->surname = $_REQUEST['surname'];
+        $trabajador->birthdate = $_REQUEST['birthdate'];
+        $trabajador->email = $_REQUEST['email'];
+        $trabajador->save();
+        header('Location:'.PATH.'trabajador');
     }
 
     public function delete($arguments)
     {
         $id = (int) $arguments[0];
-        $user = User::find($id);
-        $user->delete();
-        header('Location:'.PATH.'user');
+        $trabajador = Trabajador::find($id);
+        $trabajador->delete();
+        header('Location:'.PATH.'trabajador');
     }    
 }

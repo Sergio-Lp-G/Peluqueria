@@ -37,7 +37,7 @@
         <label>Precio</label>
         <input type="text" name="price" class="form-control">
     </div>
-    <button type="submit" class="btn btn-default">Enviar</button>
+    <button type="submit" class="btn btn-primary boton">Enviar</button>
     </form>    
   </div>
 

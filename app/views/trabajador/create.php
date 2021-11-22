@@ -32,7 +32,7 @@
         <label>Email</label>
         <input type="text" name="email" class="form-control">
     </div>
-    <button type="submit" class="btn btn-default">Enviar</button>
+    <button type="submit" class="btn btn-primary boton">Enviar</button>
     </form>    
   </div>
 

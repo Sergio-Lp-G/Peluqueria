@@ -42,7 +42,7 @@
         value="<?php echo $trabajador->email ?>"
         >
     </div>
-    <button type="submit" class="btn btn-default">Enviar</button>
+    <button type="submit" class="btn btn-primary boton">Enviar</button>
     </form>
   </div>
 

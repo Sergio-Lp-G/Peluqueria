@@ -21,7 +21,7 @@
         <!-- nuevo -->
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="<?= PATH."/login"?>">Login</a>
+                <a class="nav-link" href="<?= PATH."login"?>">Login</a>
             </li>
         </ul>
     </div>

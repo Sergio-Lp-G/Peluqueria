@@ -7,7 +7,6 @@ use Core\Model;
 
 require_once 'core/Model.php';
 
-
 class Trabajador extends Model
 {
     public function __construct()
@@ -36,6 +35,32 @@ class Trabajador extends Model
         // echo $this->birthdate->format('d-m-y');
         return $trabajador;
     }    
+
+    public static function findbyEmail($email){
+
+        $db = Trabajador::db();
+        $stmt = $db->prepare('SELECT * FROM trabajadores WHERE email=:email');
+        $stmt->execute(array(':email' => $email));
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Trabajador::class);
+        $trabajador = $stmt->fetch(PDO::FETCH_CLASS);
+        return $trabajador;
+    }
+    public function setPassword($password)
+    {
+        $password = password_hash($password, PASSWORD_BCRYPT);
+        $db = Trabajador::db();
+        $stmt = $db->prepare('UPDATE trabajadores SET password = :password WHERE id = :id');
+        $stmt->bindValue(':id', $this->id);
+        $stmt->bindValue(':password', $password);
+        $stmt->execute();
+        return $password;
+    }
+    public function passwordVerify($password, $trabajador)
+    {
+        return password_verify($password, $trabajador->password);
+    } 
+
+
     public function insert()
     {
         $db = Trabajador::db();

@@ -1,39 +1,38 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="es">
 <head>
-    <!-- <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../css/capelloStyle.css">
-    <link rel="shortcut icon" href="../img/BELLEZAcapello-favicon.jpg">
-    <title>Peluquería Capelos Belleza</title> -->
-    <?php require "app/views/parts/head.php" ?>
-
+  <?php require "app/views/parts/head.php" ?>
 </head>
-
 <body>
-    <?php require "app/views/parts/header.php" ?>
-    <div id="redes"></div>
-    <div id="tarifas"></div>
+
+  <?php require "app/views/parts/header.php" ?>
+
+  <main role="main" class="container">
+    <div class="starter-template">
+      <h1>Login</h1>
+      <form action="<?= PATH."login/login"?>" method="post">
+        <div class="form-group">
+            <label for="formGroupExampleInput">Email</label>
+            <input type="email" class="form-control" id="formGroupExampleInput" placeholder="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput">Password</label>
+            <input type="password" class="form-control" id="formGroupExampleInput"   name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    
+    </div>
     <div>
-        <p>Cancela tu cita con: 3 horas de antelación.</p>
+    <br/>
+      <p><?php echo $_SESSION['message']?></p>
     </div>
-    <div id="newTrabajador">
-
-        <form id="formulario_trabajador_new" method="POST" action="/login/save_trabajador">
-            <label>Nombre: </label><input type="text" value="" name="nombre"><br>
-            <label>Apellidos: </label><input type="text" value="" name="apellidos"><br>
-            <label>Teléfono: </label><input type="number" value="" name="telefono"><br>
-            <label>Email: </label><input type="text" value="" name="email"><br>
-            <label>Usuario: </label><input type="text" value="" name="login"><br>
-            <label>Contraseña: </label><input type="password" value="" name="password"><br>
-
-            <input type="submit" value="enviar">
-        </form>
-
     </div>
+  </main>
+  <?php require "app/views/parts/footer.php" ?>
 
 
-    <?php require "app/views/parts/footer.php" ?>
 </body>
-
+  <?php require "app/views/parts/scripts.php" ?>
 </html>

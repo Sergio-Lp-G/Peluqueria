@@ -1,10 +1,7 @@
 <?php
-
-/**
-*
-*/
 namespace App\Controllers;
 
+use App\Models\Trabajador;
 
 class LoginController
 {
@@ -19,57 +16,36 @@ class LoginController
         require "app/views/login.php";
     }
 
-    public function save_trabajador()
+    public function login(){
+
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $trabajador = Trabajador::findbyEmail($email);
+        
+        if($trabajador == false){
+            $_SESSION['message'] = 'Error el usuario no existe.';
+            header('Location:'.PATH.'login');
+        }
+        else
+        {
+            // Comprueba que la contraseña coincida con la contraseña cifrada
+            if(Trabajador::passwordVerify($password, $trabajador))
+            {
+                $_SESSION['Trabajador'] = $trabajador;
+                header('Location:'.PATH.'home');
+            }
+            else{
+                $_SESSION['message'] = 'Error, la contraseña es incorrecta.';
+                header('Location:'.PATH.'login');
+            }
+        }
+    }
+
+    public function logout()
     {
-        //echo "<h2> Hola mundo </h2>";
-
-
-        $arrParams = [];
-
-        if (isset($_POST['nombre'])) {
-            $nombreTrabajador =  $_POST['nombre'];
-            $arrParams['nombre'] = $nombreTrabajador;
-        } else {
-            $arrParams['nombre'] = "";
-        }
-
-        if (isset($_POST['apellidos'])) {
-            $apellidosTrabajador =  $_POST['apellidos'];
-            $arrParams['apellidos'] = $apellidosTrabajador;
-        } else {
-            $arrParams['apellidos'] = "";
-        }
-
-        if (isset($_POST['telefono'])) {
-            $telefonoTrabajador =  $_POST['telefono'];
-            $arrParams['telefono'] = $telefonoTrabajador;
-        } else {
-            $arrParams['telefono'] = 0;
-        }
-
-        if (isset($_POST['email'])) {
-            $emailTrabajador =  $_POST['email'];
-            $arrParams['email'] = $emailTrabajador;
-        } else {
-            $arrParams['email'] = "";
-        }
-
-        if (isset($_POST['login'])) {
-            $loginTrabajador =  $_POST['login'];
-            $arrParams['login'] = $loginTrabajador;
-        } else {
-            $arrParams['login'] = "";
-        }
-
-        if (isset($_POST['password'])) {
-            $passwordTrabajador =  $_POST['password'];
-            $arrParams['password'] = $passwordTrabajador;
-        } else {
-            $arrParams['password'] = "";
-        }
-
-        //echo 'PEPEEEEEEE';
-        /* \App\Helpers\trabajador_new($arrParams);*/
+        unset($_SESSION['Trabajador']);
+        unset($_SESSION['message']);
+        session_destroy();
+        require "app/views/login.php";
     }
 }
-

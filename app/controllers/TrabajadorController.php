@@ -1,8 +1,9 @@
 <?php
 namespace App\Controllers;
 
-require_once "app/models/Trabajador.php";
+// require_once "app/models/Trabajador.php";
 use App\Models\Trabajador;
+use Dompdf\Dompdf;
 
 /*
 * La inserción requiere dos métodos en el controlador:
@@ -86,5 +87,38 @@ class TrabajadorController
         $trabajador = Trabajador::find($id);
         $trabajador->delete();
         header('Location:'.PATH.'trabajador');
-    }    
+    }
+
+    public function pdf()
+    {
+        //iniciar buffer, para construir un response
+        ob_start();
+        $trabajadores = Trabajador::all();
+        require_once ('app/views/trabajador/pdf.php');
+        // Volcamos el contenido del buffer
+        // el response ya no va al navegador, va a $html
+        $html = ob_get_clean();
+
+        $dompdf = new DOMPDF();
+        // (Optional) Setup the paper size and orientation
+        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->loadHtml($html);
+        $dompdf->render();
+        $dompdf->stream("trabajadores.pdf", array("Attachment"=>0));
+    }
+
+    public function pdfsimple()
+    {
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml('hello world');
+
+        // (Optional) Setup the paper size and orientation
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser
+        $dompdf->stream();
+    }
 }

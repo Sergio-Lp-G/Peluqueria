@@ -6,8 +6,9 @@
 
 namespace App\Controllers;
 
-require_once "app/models/Servicio.php";
+// require_once "app/models/Servicio.php";
 use App\Models\Servicio;
+use Dompdf\Dompdf;
 
 class ServicioController
 {
@@ -75,5 +76,37 @@ class ServicioController
         $servicio = Servicio::find($id);
         $servicio->delete();
         header('Location:'.PATH.'servicio');
+    }
+
+    public function pdf()
+    {
+        //iniciar buffer, para construir un response
+        ob_start();
+        $users = User::all();
+        require_once ('app/views/user/pdf.php');
+        // Volcamos el contenido del buffer
+        // el response ya no va al navegador, va a $html
+        $html = ob_get_clean();
+
+        $dompdf = new DOMPDF();
+        // (Optional) Setup the paper size and orientation
+        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->loadHtml($html);
+        $dompdf->render();
+        $dompdf->stream("usuarios.pdf", array("Attachment"=>0));
+    }
+    public function pdfsimple()
+    {
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml('hello world');
+
+        // (Optional) Setup the paper size and orientation
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser
+        $dompdf->stream();
     }
 }

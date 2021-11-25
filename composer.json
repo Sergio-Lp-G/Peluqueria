@@ -1,0 +1,23 @@
+{
+    "name": "peluqueria/capelos-belleza",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "App\\Controllers\\": "app/controllers",
+            "App\\Models\\": "app/models"
+        }
+    },
+    "authors": [
+        {
+            "name": "Adrian Ramos",
+            "email": "ramosayensa@outlook.com"
+        },
+        {
+            "name": "Sergio-Lg-G",
+            "email": "sergiolpgar@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^1.1"
+    }
+}

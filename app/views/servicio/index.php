@@ -12,7 +12,10 @@
   <main role="main" class="container">
     <div class="starter-template">
       <h1>Lista de servicio</h1>
-      <p><a href="<?= PATH."servicio/create/".$servicio->id ?>" class="boton btn btn-primary">Nuevo</a></p>
+      <p>
+          <a href="<?= PATH."servicio/create/".$servicio->id ?>" class="boton btn btn-primary">Nuevo</a>
+          <a href="<?= PATH."servicio/pdf" ?>" class="btn btn-primary boton">Pdf</a>
+      </p>
       <table class="tabla table table-striped table-hover">
         <tr>
           <th>Nombre</th>

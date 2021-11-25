@@ -12,8 +12,12 @@
   <main role="main" class="container">
     <div class="starter-template">
       <h1>Lista de trabajadores</h1>
-      <p><a href="<?= PATH."trabajador/create/".$trabajador->id ?>" class="boton btn btn-primary">Nuevo</a></p>
-      <table class="tabla table table-striped table-hover">
+      <p>
+        <a href="<?= PATH."trabajador/create/".$trabajador->id ?>" class="boton btn btn-primary">Nuevo</a>
+        <a href="<?= PATH."trabajador/pdf" ?>" class="btn btn-primary boton">Pdf</a>
+      </p>
+
+        <table class="tabla table table-striped table-hover">
         <tr>
           <th>Nombre</th>
           <th>Apellidos</th>

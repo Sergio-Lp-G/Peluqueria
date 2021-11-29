@@ -29,3 +29,7 @@ a:hover {
     color: darkblue;
     text-decoration: none;
 }
+
+.mayuscula {
+    text-transform: capitalize;
+}

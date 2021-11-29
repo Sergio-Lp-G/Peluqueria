@@ -26,6 +26,7 @@ class Servicio extends Model
         //retornar
         return $servicios;
     }
+
     public static function find($id)
     {
         $db = Servicio::db();

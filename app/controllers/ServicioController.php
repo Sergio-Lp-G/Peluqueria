@@ -22,6 +22,25 @@ class ServicioController
         // echo "<p>En Index()</p>";
         //buscar datos
         $servicios = Servicio::all();
+
+        $order = $_GET['orderby'];
+
+        switch ($order) {
+            case 'nombre':
+                array_multisort(array_column($servicios, 'nombre'), SORT_ASC, $servicios);
+                break;
+            case 'categoria':
+                array_multisort(array_column($servicios, 'categoria'), SORT_ASC, $servicios);
+                break;
+            case 'duracion':
+                array_multisort(array_column($servicios, 'duracion'), SORT_ASC, $servicios);
+                break;
+            case 'precio':
+                array_multisort(array_column($servicios, 'precio'), SORT_ASC, $servicios);
+                break;
+            default:
+                break;
+        }
         //pasar a la vista
         require "app/views/servicio/index.php";
     }

@@ -18,10 +18,10 @@
       </p>
       <table class="tabla table table-striped table-hover">
         <tr>
-          <th>Nombre</th>
-          <th>Categoría</th>
-          <th>Duración</th>
-          <th>Precio</th>
+          <th><a href="<?= PATH."servicio?orderby=nombre" ?>">Nombre</a></th>
+          <th><a href="<?= PATH."servicio?orderby=categoria" ?>">Categoría</a></th>
+          <th><a href="<?= PATH."servicio?orderby=duracion" ?>">Duración</a></th>
+          <th><a href="<?= PATH."servicio?orderby=precio" ?>">Precio</a></th>
           <th></th>
         </tr>
 

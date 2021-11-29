@@ -20,3 +20,12 @@ footer{
     position: absolute;
     text-align: center;
 }
+
+a {
+    color: darkblue;
+}
+
+a:hover {
+    color: darkblue;
+    text-decoration: none;
+}

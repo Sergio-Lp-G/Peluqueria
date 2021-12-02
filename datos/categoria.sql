@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 02-12-2021 a las 15:42:52
+-- Tiempo de generación: 02-12-2021 a las 15:49:08
 -- Versión del servidor: 5.7.36
 -- Versión de PHP: 7.4.20
 
@@ -33,6 +33,16 @@ CREATE TABLE `categoria` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`id`, `nombre`) VALUES
+(1, 'corte'),
+(2, 'peinado'),
+(3, 'coloracion'),
+(4, 'cambio_temporal');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -50,7 +60,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

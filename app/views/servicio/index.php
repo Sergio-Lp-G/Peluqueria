@@ -28,7 +28,7 @@
         <?php foreach ($servicios as $key => $servicio) { ?>
           <tr>
           <td><?php echo $servicio->nombre ?></td>
-          <td class="mayuscula"><?php echo $servicio->categoria ?></td>
+          <td class="mayuscula"><?php echo $servicio->category->nombre ?></td>
           <td><?php echo $servicio->duracion ?></td>
           <td><?php echo $servicio->precio ?></td>
           <td>

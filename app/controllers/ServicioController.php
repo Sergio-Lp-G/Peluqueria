@@ -7,6 +7,8 @@
 namespace App\Controllers;
 
 // require_once "app/models/Servicio.php";
+
+use App\Models\Categoria;
 use App\Models\Servicio;
 use Dompdf\Dompdf;
 
@@ -47,6 +49,7 @@ class ServicioController
 
     public function create()
     {
+        $categorias = Categoria::all();
         require 'app/views/servicio/create.php';
     }
 
@@ -74,6 +77,7 @@ class ServicioController
     {
         $id = (int) $arguments[0];
         $servicio = Servicio::find($id);
+        $categorias = Categoria::all();
         require 'app/views/servicio/edit.php';
     }
 

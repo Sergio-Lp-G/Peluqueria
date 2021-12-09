@@ -32,7 +32,7 @@ class ServicioController
                 array_multisort(array_column($servicios, 'nombre'), SORT_ASC, $servicios);
                 break;
             case 'categoria':
-                array_multisort(array_column($servicios, 'categoria'), SORT_ASC, $servicios);
+                array_multisort(array_column($servicios, 'categoria_id'), SORT_ASC, $servicios);
                 break;
             case 'duracion':
                 array_multisort(array_column($servicios, 'duracion'), SORT_ASC, $servicios);
@@ -105,8 +105,8 @@ class ServicioController
     {
         //iniciar buffer, para construir un response
         ob_start();
-        $users = User::all();
-        require_once ('app/views/user/pdf.php');
+        $servicios = Servicio::all();
+        require_once ('app/views/servicio/pdf.php');
         // Volcamos el contenido del buffer
         // el response ya no va al navegador, va a $html
         $html = ob_get_clean();
@@ -116,7 +116,7 @@ class ServicioController
         $dompdf->setPaper('A4', 'landscape');
         $dompdf->loadHtml($html);
         $dompdf->render();
-        $dompdf->stream("usuarios.pdf", array("Attachment"=>0));
+        $dompdf->stream("servicios.pdf", array("Attachment"=>0));
     }
     public function pdfsimple()
     {

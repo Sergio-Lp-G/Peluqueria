@@ -35,6 +35,7 @@ class App
 
         # endregion CONSTRUCTOR OLD
 
+        session_start();
         if (isset($_GET['url']) and !empty($_GET['url'])) {
             $url = $_GET['url'];
         } else {

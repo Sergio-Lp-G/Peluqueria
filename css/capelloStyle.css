@@ -3,7 +3,13 @@ body{
 }
 
 #logo {
+    margin: 0;
     width: 100px;
+}
+
+#logoLink {
+    margin: 0;
+    padding: 0;
 }
 
 .boton {
@@ -28,6 +34,10 @@ a {
 a:hover {
     color: darkblue;
     text-decoration: none;
+}
+
+.select-mayusculas option {
+    text-transform: capitalize;
 }
 
 .mayuscula {

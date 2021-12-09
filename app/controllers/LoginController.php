@@ -31,7 +31,7 @@ class LoginController
             // Comprueba que la contraseña coincida con la contraseña cifrada
             if(Trabajador::passwordVerify($password, $trabajador))
             {
-                $_SESSION['Trabajador'] = $trabajador;
+                $_SESSION['trabajador'] = $trabajador;
                 header('Location:'.PATH.'home');
             }
             else{
@@ -43,7 +43,7 @@ class LoginController
 
     public function logout()
     {
-        unset($_SESSION['Trabajador']);
+        unset($_SESSION['trabajador']);
         unset($_SESSION['message']);
         session_destroy();
         require "app/views/login.php";

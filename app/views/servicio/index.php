@@ -13,30 +13,32 @@
     <div class="starter-template">
       <h1>Lista de servicio</h1>
       <p>
-          <a href="<?= PATH."servicio/create/".$servicio->id ?>" class="boton btn btn-primary">Nuevo</a>
-          <a href="<?= PATH."servicio/pdf" ?>" class="btn btn-primary boton">Pdf</a>
+        <a href="<?= PATH . "servicio/create/" . $servicio->id ?>" class="boton btn btn-primary">Nuevo</a>
+        <a href="<?= PATH . "servicio/pdf" ?>" class="btn btn-primary boton">Pdf</a>
       </p>
       <table class="tabla table table-striped table-hover">
         <tr>
-          <th><a href="<?= PATH."servicio?orderby=nombre" ?>">Nombre</a></th>
-          <th><a href="<?= PATH."servicio?orderby=categoria" ?>">Categoría</a></th>
-          <th><a href="<?= PATH."servicio?orderby=duracion" ?>">Duración</a></th>
-          <th><a href="<?= PATH."servicio?orderby=precio" ?>">Precio</a></th>
+          <th><a href="<?= PATH . "servicio?orderby=nombre" ?>">Nombre</a></th>
+          <th><a href="<?= PATH . "servicio?orderby=categoria" ?>">Categoría</a></th>
+          <th><a href="<?= PATH . "servicio?orderby=duracion" ?>">Duración</a></th>
+          <th><a href="<?= PATH . "servicio?orderby=precio" ?>">Precio</a></th>
           <th></th>
         </tr>
 
         <?php foreach ($servicios as $key => $servicio) { ?>
           <tr>
-          <td><?php echo $servicio->nombre ?></td>
-          <td class="mayuscula"><?php echo $servicio->category->nombre ?></td>
-          <td><?php echo $servicio->duracion ?></td>
-          <td><?php echo $servicio->precio ?></td>
-          <td>
-          
-            <a href="<?= PATH."servicio/show/".$servicio->id ?>" class="boton btn btn-primary">Ver </a>
-            <a href="<?= PATH."servicio/edit/".$servicio->id ?>" class="boton btn btn-primary">Editar </a>
-            <a href="<?= PATH."servicio/delete/".$servicio->id ?>" class="boton btn btn-primary">Borrar </a>
-          </td>
+            <td><?php echo $servicio->nombre ?></td>
+            <td class="mayuscula"><?php echo $servicio->category->nombre ?></td>
+            <td><?php echo $servicio->duracion ?></td>
+            <td><?php echo $servicio->precio ?></td>
+            <td>
+
+              <a href="<?= PATH . "servicio/show/" . $servicio->id ?>" class="boton btn btn-primary">Ver </a>
+              <?php if (isset($_SESSION['trabajador'])) { ?>
+                <a href="<?= PATH . "servicio/edit/" . $servicio->id ?>" class="boton btn btn-primary">Editar </a>
+                <a href="<?= PATH . "servicio/delete/" . $servicio->id ?>" class="boton btn btn-primary">Borrar </a>
+              <?php } ?>
+            </td>
           </tr>
         <?php } ?>
       </table>

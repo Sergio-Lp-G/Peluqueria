@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 // require_once "app/models/Trabajador.php";
 use App\Models\Trabajador;
+use App\Models\Trabajador_Servicio;
 use Dompdf\Dompdf;
 
 /*
@@ -58,6 +59,9 @@ class TrabajadorController
         // $id = (int) $args[0];
         list($id) = $args;
         $trabajador = Trabajador::find($id);
+        $servicios_id= Trabajador_Servicio::find($id);
+        //TODO: sacar los nombres de los servicios por cada trabajador desde los id de servicios
+
         // var_dump($trabajador);
         // exit();
         require('app/views/trabajador/show.php');        

@@ -21,6 +21,10 @@ body{
     border-bottom: crimson 1px solid;
 }
 
+.tabla {
+    table-layout: fixed;
+}
+
 footer{
     width: 100%;
     position: absolute;

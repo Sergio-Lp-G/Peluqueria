@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 // require_once "app/models/Trabajador.php";
+use App\Models\Servicio;
 use App\Models\Trabajador;
 use App\Models\Trabajador_Servicio;
 use Dompdf\Dompdf;
@@ -45,12 +46,10 @@ class TrabajadorController
     
     public function store()
     {
-        $trabajador = new Trabajador();
-        $trabajador->name = $_REQUEST['name'];
-        $trabajador->surname = $_REQUEST['surname'];
-        $trabajador->birthdate = $_REQUEST['birthdate'];
-        $trabajador->email = $_REQUEST['email'];
-        $trabajador->insert();
+        $trabajadorservicio = new Trabajador_Servicio();
+        $trabajadorservicio->name = $_REQUEST['trabajador_id'];
+        $trabajadorservicio->surname = $_REQUEST['servicio_id'];
+        $trabajadorservicio->insert();
         header('Location:'.PATH.'trabajador');
     }
     
@@ -59,8 +58,14 @@ class TrabajadorController
         // $id = (int) $args[0];
         list($id) = $args;
         $trabajador = Trabajador::find($id);
-        $servicios_id= Trabajador_Servicio::find($id);
+        $servicios_id = Trabajador_Servicio::find($id);
         //TODO: sacar los nombres de los servicios por cada trabajador desde los id de servicios
+
+        $servicios = [];
+        foreach ( $servicios_id as $key => $servicioid ) {
+            $servicio = Servicio::find($servicioid);
+            array_push( $servicios, $servicio );
+        }
 
         // var_dump($trabajador);
         // exit();

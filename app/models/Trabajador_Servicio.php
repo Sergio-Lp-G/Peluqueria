@@ -37,7 +37,7 @@ class Trabajador_Servicio extends Model
     {
         $db = Trabajador_Servicio::db();
         $stmt = $db->prepare('INSERT INTO trabajador_servicio(trabajador_id, servicio_id) VALUES(:trabajador_id, :servicio_id)');
-        $stmt->bindValue(':rabajador_id', $this->trabajador_id);
+        $stmt->bindValue(':trabajador_id', $this->trabajador_id);
         $stmt->bindValue(':servicio_id', $this->servicio_id);
 
         return $stmt->execute();
@@ -64,11 +64,12 @@ class Trabajador_Servicio extends Model
         return $stmt->execute();
     }
 
-    public function delete()
+    public function delete($trabajador_id, $servicio_id)
     {
         $db = Trabajador_Servicio::db();
-        $stmt = $db->prepare('DELETE FROM trabajador_servicio WHERE trabajador_id = :id');
-        $stmt->bindValue(':trabajador_id', $this->trabajador_id);
+        $stmt = $db->prepare('DELETE FROM trabajador_servicio WHERE trabajador_id = :trabajador_id AND servicio_id = :servicio_id');
+        $stmt->bindValue(':trabajador_id', $trabajador_id);
+        $stmt->bindValue(':servicio_id', $servicio_id);
 
         return $stmt->execute();
     }

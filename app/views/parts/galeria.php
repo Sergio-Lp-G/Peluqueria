@@ -6,7 +6,7 @@
     $dirint = dir($directory);
     while (($archivo = $dirint->read()) !== false) {
         echo  '<div class="galeria">';
-        echo '<img src="' . $directory . "/" . $archivo . '">' . "\n";
+        echo '<img src="' . $directory . '/' . $archivo . '">' . "\n";
         echo  '</div>';
     }
     $dirint->close();

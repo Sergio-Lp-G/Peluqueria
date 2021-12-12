@@ -1,4 +1,4 @@
-body{
+body {
     background-color: lightgray;
 }
 
@@ -21,7 +21,7 @@ body{
     border-bottom: crimson 1px solid;
 }
 
-footer{
+footer {
     width: 100%;
     position: absolute;
     text-align: center;
@@ -42,4 +42,25 @@ a:hover {
 
 .mayuscula {
     text-transform: capitalize;
+}
+
+#fotoGaleria {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 95%;
+}
+
+.galeria {
+    display: flex;
+    padding: 5px;
+}
+
+.galeria img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
 }

@@ -34,7 +34,6 @@ class TrabajadorServicioController
     public function create($trabajadorid)
     {
         $trabajador = Trabajador::find($trabajadorid[0]);
-        var_dump($trabajador->id);
         $servicios = Servicio::all();
         require 'app/views/trabajador_servicio/create.php';
     }

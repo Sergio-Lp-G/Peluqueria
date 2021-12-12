@@ -1,4 +1,6 @@
 <div id="fotoGaleria">
+    <h2>Galería de nuestras clientas</h2>
+    <p>!Aquí podrías estar tú!</p>
     <div class="galeria">
         <img src="../../../img/rizos.jpg" alt="rizos">
     </div>

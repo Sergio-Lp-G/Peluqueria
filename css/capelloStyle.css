@@ -73,6 +73,11 @@ section {
     width: 90%;
 }
 
+#fotoGaleria h2,
+p {
+    text-align: center;
+}
+
 .galeria {
     display: flex;
     padding: 5px;

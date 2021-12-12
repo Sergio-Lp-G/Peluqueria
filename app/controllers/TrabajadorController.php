@@ -46,10 +46,12 @@ class TrabajadorController
     
     public function store()
     {
-        $trabajadorservicio = new Trabajador_Servicio();
-        $trabajadorservicio->name = $_REQUEST['trabajador_id'];
-        $trabajadorservicio->surname = $_REQUEST['servicio_id'];
-        $trabajadorservicio->insert();
+        $trabajador = new Trabajador();
+        $trabajador->name = $_REQUEST['name'];
+        $trabajador->surname = $_REQUEST['surname'];
+        $trabajador->birthdate = $_REQUEST['birthdate'];
+        $trabajador->email = $_REQUEST['email'];
+        $trabajador->insert();
         header('Location:'.PATH.'trabajador');
     }
     

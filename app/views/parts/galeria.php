@@ -3,10 +3,10 @@
         <img src="../../../img/rizos.jpg" alt="rizos">
     </div>
     <div class="galeria">
-        <img src=".../../../img/trenza-vikinga2" alt="trenza vikinga">
+        <img src="../../../img/trenza-vikinga2.jpg" alt="trenza vikinga">
     </div>
     <div class="galeria">
-        <img src=".../../../img/trenzas1.jpg" alt="sala cardio">
+        <img src="../../../img/trenzas1.jpg" alt="trenzas">
     </div>
     <div class="galeria">
         <img src="../../../img/mechas.jpg" alt="mechas">

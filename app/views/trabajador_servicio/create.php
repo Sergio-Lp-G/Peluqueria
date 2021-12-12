@@ -12,7 +12,7 @@
 <main role="main" class="container">
     <div class="starter-template">
 
-        <h1>Alta de trabajador</h1>
+        <h1>Añadir servicio a trabajador</h1>
 
         <form method="post" action="<?= PATH."trabajadorservicio/store"?>">
 

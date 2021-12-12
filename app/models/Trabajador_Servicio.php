@@ -49,6 +49,22 @@ class Trabajador_Servicio extends Model
         $stmt = $db->prepare('SELECT * FROM trabajador_servicio WHERE trabajador_id=:id');
         $stmt->execute(array(':id' => $id));
         $stmt->setFetchMode(PDO::FETCH_CLASS, Trabajador_Servicio::class);
+        $trabajador_servicios = $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        return $trabajador_servicios;
+    }
+
+    public static function findAll($trabajador_id, $servicio_id)
+    {
+        $db = Trabajador_Servicio::db();
+        //$stmt = $db->prepare('SELECT * FROM trabajador_servicio WHERE trabajador_id = :trabajador_id AND servicio_id = :servicio_id');
+//        $stmt->bindValue(':trabajador_id', trabajador_id);
+//        $stmt->bindValue(':servicio_id', servicio_id);
+        $stmt = $db->prepare('SELECT * 
+FROM trabajador_servicio 
+WHERE trabajador_id = ? AND servicio_id = ?');
+        $stmt->execute(array($trabajador_id, $servicio_id));
+        $stmt->setFetchMode(PDO::FETCH_CLASS, Trabajador_Servicio::class);
         $trabajador_servicios = $stmt->fetch(PDO::FETCH_CLASS);
 
         return $trabajador_servicios;
@@ -64,12 +80,13 @@ class Trabajador_Servicio extends Model
         return $stmt->execute();
     }
 
-    public function delete($trabajador_id, $servicio_id)
+    public function delete()
     {
+
         $db = Trabajador_Servicio::db();
         $stmt = $db->prepare('DELETE FROM trabajador_servicio WHERE trabajador_id = :trabajador_id AND servicio_id = :servicio_id');
-        $stmt->bindValue(':trabajador_id', $trabajador_id);
-        $stmt->bindValue(':servicio_id', $servicio_id);
+        $stmt->bindValue(':trabajador_id', $this->trabajador_id);
+        $stmt->bindValue(':servicio_id', $this->servicio_id);
 
         return $stmt->execute();
     }

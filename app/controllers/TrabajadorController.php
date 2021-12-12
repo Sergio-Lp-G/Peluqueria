@@ -59,17 +59,14 @@ class TrabajadorController
         list($id) = $args;
         $trabajador = Trabajador::find($id);
         $servicios_id = Trabajador_Servicio::find($id);
-        //TODO: sacar los nombres de los servicios por cada trabajador desde los id de servicios
 
         $servicios = [];
-        foreach ( $servicios_id as $key => $servicioid ) {
-            $servicio = Servicio::find($servicioid);
+        foreach ( $servicios_id as $servicioid ) {
+            $servicio = Servicio::find($servicioid->servicio_id);
             array_push( $servicios, $servicio );
         }
 
-        // var_dump($trabajador);
-        // exit();
-        require('app/views/trabajador/show.php');        
+        require('app/views/trabajador/show.php');
     }
     public function edit($arguments)
     {

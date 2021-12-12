@@ -18,7 +18,7 @@
         <li><strong>Email: </strong><?php echo $trabajador->email ?></li>
         <li><strong>F. nacimiento: </strong><?php echo $trabajador->birthdate->format('d-m-Y') ?></li>
         <li><strong>Servicios:</strong>
-            <p>
+            <p class="left-align">
                 <a href="<?= PATH."trabajadorservicio/create/".$trabajador->id ?>" class="boton btn btn-primary">Nuevo</a>
             </p>
             <table>

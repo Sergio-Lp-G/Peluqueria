@@ -57,7 +57,7 @@ class ServicioController
     {
         $servicio = new Servicio();
         $servicio->nombre = $_REQUEST['name'];
-        $servicio->categoria = $_REQUEST['category'];
+        $servicio->categoria_id = $_REQUEST['category'];
         $servicio->duracion = $_REQUEST['time'];
         $servicio->precio = $_REQUEST['price'];
         $servicio->insert();

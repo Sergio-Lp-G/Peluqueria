@@ -3,12 +3,14 @@
 <div id="fotoGaleria">
     <?php
     $directory = "img/galeria";
-    $dirint = dir($directory);
-    while (($archivo = $dirint->read()) !== false) {
-        echo  '<div class="galeria">';
-        echo '<img src="' . $directory . "/" . $archivo . '">' . "\n";
-        echo  '</div>';
+    $dirint = scandir($directory);
+
+    foreach ( $dirint as $archivo ) {
+        if (!($archivo == "." || $archivo == "..")) {
+            echo '<div class="galeria">';
+            echo '<img src="' . $directory . "/" . $archivo . '">' . "\n";
+            echo '</div>';
+        }
     }
-    $dirint->close();
     ?>
 </div>

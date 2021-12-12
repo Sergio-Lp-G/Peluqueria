@@ -17,9 +17,9 @@
         <form method="post" action="<?= PATH."trabajadorservicio/store"?>">
 
             <div class="form-group">
-                <input type="hidden" id="trabajador_id" value="<?php echo $trabajador->id ?>"
+                <input type="hidden" name="trabajador_id" value="<?php echo $trabajador->id ?>"
                 <label>Categoría</label>
-                <select name="category" class="form-control">
+                <select name="servicio_id" class="form-control">
                     <?php
                     foreach ($servicios  as $key => $servicio) { ?>
                         <option value="<? echo $servicio->id ?>"><?php echo $servicio->nombre ?></option>

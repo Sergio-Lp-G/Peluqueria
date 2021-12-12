@@ -1,9 +1,4 @@
-html {
-    margin: 2% auto;
-}
-
 body {
-    margin: 5% auto;
     background-color: lightgray;
     font-family: Arial;
 }
@@ -79,7 +74,7 @@ p {
     flex-wrap: wrap;
     justify-content: space-between;
     flex-grow: 1;
-    width: 90%;
+    width: 70%;
 }
 
 .galeria {
@@ -88,7 +83,11 @@ p {
 }
 
 .galeria img {
-    width: 250px;
-    height: 150px;
+    width: 350px;
+    height: 250px;
     object-fit: cover;
+}
+
+.left-align {
+    text-align: left;
 }

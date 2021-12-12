@@ -60,6 +60,11 @@ section {
     min-height: 60px;
 }
 
+section h2,
+p {
+    text-align: center;
+}
+
 
 /* los arreglos de la galeria, deberian salir las imagenes al mismo tamaño y en varias columnas*/
 
@@ -71,11 +76,6 @@ section {
     justify-content: space-between;
     flex-grow: 1;
     width: 90%;
-}
-
-#fotoGaleria h2,
-p {
-    text-align: center;
 }
 
 .galeria {

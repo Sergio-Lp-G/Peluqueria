@@ -16,14 +16,17 @@
 
 <body>
     <?php require "app/views/parts/header.php" ?>
-    <div id="redes"></div>
-    <div id="tarifas"></div>
-    <div>
-        <p>Cancela tu cita con: 3 horas de antelación.</p>
-    </div>
-    <!--<a class="nav-link" href="<?= PATH . "login" ?>">Usuarios</a>
--->
-    <?php require "app/views/parts/galeria.php" ?>
+    <section>
+
+        <div id="redes"></div>
+        <div id="tarifas"></div>
+        <div>
+            <p>Cancela tu cita con: 3 horas de antelación.</p>
+        </div>
+        <!--<a class="nav-link" href="<?= PATH . "login" ?>">Usuarios</a>
+    -->
+        <?php require "app/views/parts/galeria.php" ?>
+    </section>
 
     <?php require "app/views/parts/footer.php" ?>
 </body>

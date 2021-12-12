@@ -8,8 +8,8 @@
     <link rel="shortcut icon" href="../img/BELLEZAcapello-favicon.jpg">
     <title>Peluquería Capelos Belleza</title> -->
 
-    <link rel="stylesheet" type="text/css" href="../css/capelloStyle.css">
-    <!-- <link rel="shortcut icon" href="../img/BELLEZAcapello-favicon.jpg"> -->
+    <!--<link rel="stylesheet" type="text/css" href="../css/capelloStyle.css">
+     <link rel="shortcut icon" href="../img/BELLEZAcapello-favicon.jpg"> -->
     <?php require "app/views/parts/head.php" ?>
 
 </head>

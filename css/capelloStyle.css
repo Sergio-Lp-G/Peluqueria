@@ -62,6 +62,9 @@ section {
     min-height: 60px;
 }
 
+
+/* los arreglos de la galeria, deberian salir las imagenes al mismo tamaño y en varias columnas*/
+
 #fotoGaleria {
     margin-left: auto;
     margin-right: auto;

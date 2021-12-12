@@ -1,5 +1,13 @@
+html {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 body {
+    max-width: 1000px;
+    margin: 0 auto;
     background-color: lightgray;
+    font-family: Arial;
 }
 
 #logo {

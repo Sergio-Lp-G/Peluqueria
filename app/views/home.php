@@ -17,8 +17,12 @@
 <body>
     <?php require "app/views/parts/header.php" ?>
     <section>
+        <div id="info">
+            <div id="horario"></div>
+            <div id="carrusel"></div>
+        </div>
+        <?php require "app/views/parts/redes.php" ?>
 
-        <div id="redes"></div>
         <div id="tarifas"></div>
         <div>
             <p>Cancela tu cita con: 3 horas de antelación.</p>

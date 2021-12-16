@@ -7,10 +7,10 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <!--<li class="nav-item active">
-                <a class="nav-link" href="<?= PATH."home"?>">Home</a>
-            </li>-->
-
+            <li class="nav-item active">
+                <a class="nav-link" href="<?= PATH."nosotros"?>">Sobre Nosotros</a>
+            </li>
+        
             <li class="nav-item active">
             <a class="nav-link" href="<?php echo isset($_SESSION['trabajador']) ? PATH."trabajador":"" ?>">
                 <?php echo isset($_SESSION['trabajador']) ? "Trabajadores":""?></a>

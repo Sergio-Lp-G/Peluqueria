@@ -26,7 +26,7 @@ body {
     table-layout: fixed;
 }
 
-footer{
+footer {
     width: 100%;
     position: absolute;
     text-align: center;
@@ -59,11 +59,30 @@ section {
     min-height: 60px;
 }
 
-section h2,
-p {
+#nosotros {
+    width: 100%;
+    height: 500px;
+    background: url("../img/BELLEZAcapello-01.jpg") center center no-repeat;
+}
+
+#nosotros h1 {
     text-align: center;
 }
 
+section h2, p {
+    text-align: center;
+}
+
+#redes {
+    display: block;
+    max-width: 85%;
+    margin: 5px auto;
+    text-align: center;
+}
+
+#redes #tlf {
+    text-align: center;
+}
 
 /* los arreglos de la galeria, deberian salir las imagenes al mismo tamaño y en varias columnas*/
 
@@ -90,4 +109,10 @@ p {
 
 .left-align {
     text-align: left;
+}
+
+footer {
+    left: 0px;
+    width: 100%;
+    min-height: 200px;
 }

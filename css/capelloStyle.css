@@ -58,6 +58,13 @@ section {
     width: 90%;
     min-height: 60px;
 }
+#encabezado{
+    position: fixed;
+}
+#homeServicio{
+    height: 400px;
+    overflow: scroll;
+}
 
 #nosotros {
     width: 100%;
@@ -99,7 +106,15 @@ section h2, p {
     flex-grow: 1;
     width: 70%;
 }
-
+#videoLearn{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 70%;
+}
 .galeria {
     display: flex;
     padding: 5px;

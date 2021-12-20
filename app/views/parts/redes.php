@@ -4,4 +4,5 @@
     <img class="social" id="tw" src="/img/icono/twitter.jpg" alt="Twitter">Twitter
     <img class="social" id="fcb" src="/img/icono/facebook.jpg" alt="Facebook">Facebook
     <img class="social" id="flc" src="/img/icono/flickr.jpg" alt="Flickr">Flickr</br>
+    <p>Contacto: capelos@belleza.com</p>
 </div>

@@ -84,6 +84,10 @@ section h2, p {
     text-align: center;
 }
 
+.social {
+    border-radius: 9px;
+}
+
 /* los arreglos de la galeria, deberian salir las imagenes al mismo tamaño y en varias columnas*/
 
 #fotoGaleria {

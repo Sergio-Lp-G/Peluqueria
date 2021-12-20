@@ -40,6 +40,9 @@
             <div id="carrusel">
 
             </div>
+            <div id="cita">
+                <h2>PIDE CITA</h2>
+            </div>
         </div>
         <?php require "app/views/parts/redes.php" ?>
 

@@ -1,7 +1,7 @@
 body {
-    background-color: lightgray;
+    background-color: rgb(255, 255, 255);
     font-family: Arial;
-
+    color: gray;
 }
 
 #logo {
@@ -20,7 +20,7 @@ body {
 
 .tabla td {
     background-color: transparent;
-    border-bottom: crimson 1px solid;
+    border-bottom: white 1px solid;
 }
 
 .tabla {
@@ -34,11 +34,12 @@ footer {
 }
 
 a {
-    color: darkblue;
+    color: rgb(95, 95, 95);
+    ;
 }
 
 a:hover {
-    color: darkblue;
+    color: rgb(95, 95, 95);
     text-decoration: none;
 }
 
@@ -95,9 +96,8 @@ section h2, p {
 }
 
 #info {
-
     width: 1000px;
-    padding-top: 20px;
+    padding-top: 15px;
     margin: auto;
     justify-content: space-between;
 
@@ -109,6 +109,7 @@ section h2, p {
     margin-right: 10%;
 }
 
+
 #horario dl {
     display: flex;
     flex-wrap: wrap;
@@ -117,12 +118,24 @@ section h2, p {
 
 #carrusel {
     float: left;
-
     background: url("../img/BELLEZAcapello-01.jpg") center center no-repeat;
-    width: 60%;
+    width: 50%;
     min-height: 220px;
+    border: solid 1px lightgray;
+}
 
-    border: solid 1px blanchedalmond;
+#cita {
+    text-align: center;
+    width: 20%;
+    height: 200px;
+    float: right;
+    border: solid 1px grey;
+    display: flex;
+}
+
+#cita h2 {
+    text-align: center;
+    display: flex;
 }
 
 .social {

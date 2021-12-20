@@ -18,8 +18,28 @@
     <?php require "app/views/parts/header.php" ?>
     <section>
         <div id="info">
-            <div id="horario"></div>
-            <div id="carrusel"></div>
+            <div id="horario">
+                <dl>
+                    <dt>Lunes:</dt>
+                    <dd> 09:00-19:00</dd>
+                    <dt>Martes:</dt>
+                    <dd> 09:00-19:00</dd>
+                    <dt>Miercoles:</dt>
+                    <dd> 09:00-19:00</dd>
+                    <dt>Jueves:</dt>
+                    <dd> 09:00-19:00</dd>
+                    <dt>Viernes:</dt>
+                    <dd> 09:00-13:00</dd>
+                    <dt>Sábado:</dt>
+                    <dd> 09:00-13:00</dd>
+                    <dt>Domingo:</dt>
+                    <dd> Cerrado</dd>
+
+                </dl>
+            </div>
+            <div id="carrusel">
+
+            </div>
         </div>
         <?php require "app/views/parts/redes.php" ?>
 
@@ -41,8 +61,10 @@
                 <iframe src="https://www.youtube.com/embed/My-snxJBp8M" width="200" height="150" muted></iframe>
             </div>
         </div>
-        <!--<a class="nav-link" href="<?= PATH . "login" ?>">Usuarios</a>
-    -->
+
+        <br>
+        <hr>
+        <br>
         <?php require "app/views/parts/galeria.php" ?>
 
         <div>

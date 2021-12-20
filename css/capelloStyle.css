@@ -1,6 +1,7 @@
 body {
     background-color: lightgray;
     font-family: Arial;
+
 }
 
 #logo {
@@ -58,10 +59,12 @@ section {
     width: 90%;
     min-height: 60px;
 }
-#encabezado{
+
+#encabezado {
     position: fixed;
 }
-#homeServicio{
+
+#homeServicio {
     height: 400px;
     overflow: scroll;
 }
@@ -91,6 +94,37 @@ section h2, p {
     text-align: center;
 }
 
+#info {
+
+    width: 1000px;
+    padding-top: 20px;
+    margin: auto;
+    justify-content: space-between;
+
+}
+
+#horario {
+    width: 190px;
+    float: left;
+    margin-right: 10%;
+}
+
+#horario dl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#carrusel {
+    float: left;
+
+    background: url("../img/BELLEZAcapello-01.jpg") center center no-repeat;
+    width: 60%;
+    min-height: 220px;
+
+    border: solid 1px blanchedalmond;
+}
+
 .social {
     border-radius: 9px;
 }
@@ -106,7 +140,8 @@ section h2, p {
     flex-grow: 1;
     width: 70%;
 }
-#videoLearn{
+
+#videoLearn {
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -115,6 +150,7 @@ section h2, p {
     flex-grow: 1;
     width: 70%;
 }
+
 .galeria {
     display: flex;
     padding: 5px;
@@ -134,4 +170,8 @@ footer {
     left: 0px;
     width: 100%;
     min-height: 200px;
+}
+
+hr {
+    background-color: black;
 }
